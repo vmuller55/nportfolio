@@ -1,0 +1,148 @@
+.resumeContainer{
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.resumeContent{
+    height: 80%;
+    width: 85%;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0px 0px 10px rgba( 100, 100, 100, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    gap: 20%;      
+}
+
+.resumeTitle{
+    color: white;
+    font-size: 24px;
+}
+
+.resumeInfos{
+    text-align: center;
+    color: white;
+    text-shadow: 0px 3px 5px black;
+}
+
+.resumeInfos p{
+    font-size: 20px;
+}
+
+.resumeSkillTab{
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill{
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 0px 3px 5px black;
+}
+
+.responsive{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: url('../../assets/responsiveTwo.gif');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 10%;
+}
+
+.seo{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: url('../../assets/seo.gif');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 10%;
+}
+
+.style{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-image: url('../../assets/style.gif');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 10%;
+}
+
+.resumeImage{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 10px;
+    background-image: url('../../assets/exploBack.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.resumeImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .skill{
+        font-size: 14px;
+        width: 100%;
+        height: 30%;
+    }
+    .skill h3{
+        font-size: 16px;
+        margin: 5px;
+    }
+    .ref span{
+        display: none;
+    }
+    .ref::after{
+        content: 'SEO';
+    }
+    .resumeSkillTab{
+        flex-wrap: wrap;
+        height: 90%;
+    }
+    .style{
+        height: 50%;
+        width: 30%;
+        padding-top: 0px;
+        margin: auto;
+    }
+    .seo{
+        height: 50%;
+        width: 30%;
+        padding-top: 0px;
+        margin: auto;
+    }
+    .responsive{
+        height: 50%;
+        width: 30%;
+        padding-top: 0px;
+        margin: auto;
+    }
+    .resumeInfos p{
+        font-size: 16px;
+    }
+    .resumeContent{
+        gap: 0;
+    }
+    .resumeTitle{
+        font-size: 20px;
+    }
+}
+
