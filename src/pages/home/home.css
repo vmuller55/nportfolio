@@ -38,7 +38,7 @@
     height: 50vh;
     top: 0px;
     overflow: hidden;
-    z-index: 999;
+    z-index: 998;
 }
 
 .homeImageTop.animate{
@@ -88,34 +88,49 @@
     font-size: 24px;
     color: white;
     text-shadow: 0px 3px 5px black;
+    .Typewriter{
+        z-index: 10010;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        text-shadow: 0px 3px 5px black;
+        font-size: 30px;
+    }
 }
+
 
 .loader.off{
     display: none;
 }
 
 .barre{
-    width: 100%;
-    height: 10px;
-    border-radius: 25px;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     margin: auto;
+    z-index: 1000;
+    position: absolute;
+    top: -450%;
 }
 
 .recharge{
+    top: 50%;
+    position: absolute;
     background: linear-gradient(to left, #0E0F13,#2A242F);
     width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    animation: fillLoadingBarre 1.5s ease-in-out;
+    height: 10px;
+    animation: fillLoadingBarre 2s ease-in-out;
 }
 
 @keyframes fillLoadingBarre{
     from{
-        transform: translateX(-100%);
+        top: 0;
+        height: 100%;
     }
     to {
-        transform: translateX(0%);
+        height: 10px;
     }
 }
 

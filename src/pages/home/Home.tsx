@@ -1,5 +1,5 @@
 import './home.css'
-import Montain from '../../assets/montainFour.jpg'
+import Montain from '../../assets/montainFour.webp'
 import { useState, useEffect } from 'react'
 import Typewriter from "typewriter-effect";
 import Resume from '../../components/resume/Resume';
@@ -56,6 +56,7 @@ const Home = () => {
                     <div className="barre">
                         <div className="recharge"></div>
                     </div>
+                    <div className="loaderBack"></div>
                 </div>
                 <div className={`homeImageBottom ${animationTitle ? 'animate' : ''}`}>
                     <img src={Montain} alt="Montagnes"/>
