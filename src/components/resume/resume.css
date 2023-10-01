@@ -80,9 +80,8 @@
 
 .resumeImage{
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 10px;
+    height: 100%;
+    width: 100%;
     background-image: url('../../assets/exploBack.webp');
     background-size: cover;
     background-position: center center;

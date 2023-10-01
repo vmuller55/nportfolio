@@ -4,7 +4,11 @@
     position: relative;
     overflow-x: hidden;
     background: linear-gradient(#0E0F13,#2A242F);
+    &.loading{
+        overflow: hidden;
+    }
 }
+
 
 .homeContent{
     width: 100vw;
@@ -39,17 +43,14 @@
     top: 0px;
     overflow: hidden;
     z-index: 998;
+    display: off;
+    background-image: url('../../assets/montainFour.webp');
+    background-size: cover;
 }
 
 .homeImageTop.animate{
-    animation: upImg 5s ease-in-out;
+    animation: upImg 1.5s ease-in-out;
     transform: translateY(-100%);
-}
-
-.homeImageTop img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
 }
 
 .homeImageBottom{
@@ -58,18 +59,15 @@
     height: 50vh;
     bottom: 0;
     overflow: hidden;
+    display: off;
+    background-image: url('../../assets/montainFour.webp');
+    background-size: cover;
+    background-position: center -100%;
 }
 
 .homeImageBottom.animate{
-    animation: downImg 5s ease-in-out;
+    animation: downImg 1.5s ease-in-out;
     transform: translateY(100%);
-}
-
-.homeImageBottom img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translateY(-50%)
 }
 
 .loader.animate{
@@ -120,8 +118,8 @@
     position: absolute;
     background: linear-gradient(to left, #0E0F13,#2A242F);
     width: 100%;
-    height: 10px;
-    animation: fillLoadingBarre 2s ease-in-out;
+    height: 0px;
+    animation: fillLoadingBarre 3s ease-out;
 }
 
 @keyframes fillLoadingBarre{
@@ -130,13 +128,14 @@
         height: 100%;
     }
     to {
-        height: 10px;
+        height: 0px;
     }
 }
 
 @keyframes upImg {
     from{
         transform: translateY(0%);
+        display: block;
     }
     to{
         transform: translateY(-100%);
@@ -146,6 +145,7 @@
 @keyframes downImg {
     from{
         transform: translateY(0%);
+        display: block;
     }
     to{
         transform: translateY(100%);

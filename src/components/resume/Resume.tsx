@@ -1,11 +1,10 @@
 import './resume.css'
-// import ColorExplo from '../../assets/exploBack.png'
+
 
 const Resume = () => {
     return(
         <div className="resumeContainer">
             <div className="resumeImage">
-                {/* <img src={ColorExplo} alt='explosion de couleur'></img> */}
             </div>
             <div className="resumeContent">
                 <div className="resumeInfos">
