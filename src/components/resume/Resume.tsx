@@ -1,6 +1,5 @@
 import './resume.css'
 
-
 const Resume = () => {
     return(
         <div className="resumeContainer">
