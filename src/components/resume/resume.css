@@ -16,7 +16,11 @@
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    gap: 20%;      
+    gap: 20%; 
+    background-image: url('../../assets/test.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;     
 }
 
 .resumeTitle{
@@ -82,10 +86,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url('../../assets/exploBack.webp');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    
 }
 
 @media only screen and (max-width: 600px) {
