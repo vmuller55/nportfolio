@@ -1,150 +1,182 @@
 .homeContainer{
     width: 100vw;
     height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-    background: linear-gradient(#0E0F13,#2A242F);
-    &.loading{
-        overflow: hidden;
-    }
 }
 
-
-.homeContent{
-    width: 100vw;
-    height: 100vh;
-}
-
-.homeTitle{
+.nav{
+    height: 15%;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    color: #F8F9FA;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
-    text-align: center;
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.homeTitle h1{
-    background: linear-gradient(to left, #0E0F13,#2A242F);
-    
-    width: 100%;
-    height: 20%;
+.nav h1{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.homeLoader{
-    width: 100vw;
-    height: 100vh;
+.nav.IsNotVisible{
+    transform: translateY(-100%);
+}
+
+
+
+.navButton{
     position: absolute;
-    overflow: hidden;
-}
-
-.homeImageTop{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    overflow: hidden;
-    background-image: url('../../assets/test2.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-}
-
-.loader.animate{
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 40%;
-    transform: translate(-50%, 50%);
-    z-index: 999;
-    text-align: center;
-}
-
-.textLoader{
-    font-size: 24px;
-    color: white;
-    text-shadow: 0px 3px 5px black;
-    .Typewriter{
-        z-index: 10010;
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        top: 70%;
-        transform: translate(-50%);
-        width: 100%;
-        text-shadow: 0px 3px 5px black;
-        font-size: 30px;
-    }
-}
-
-.arrowContainer{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
-    animation: arrowDown 0.5s linear infinite alternate;
-    color: black;
-    text-shadow: 0px 3px 5px white;
-    font-size: 24px;
-}
-
-.loader.off{
-    display: none;
-}
-
-.barre{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: auto;
-    z-index: 1000;
-    position: absolute;
-    top: -450%;
-}
-
-.recharge{
+    right: 10%;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    flex-direction: column;
     top: 50%;
-    position: absolute;
-    background: linear-gradient(to left, #0E0F13,#2A242F);
-    width: 100%;
-    height: 0px;
-    animation: fillLoadingBarre 3s ease-in-out;
+    bottom: 50%;
+    transform: translateY(-50%);  
+    border: none;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 10px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit; 
 }
 
-@keyframes arrowDown {
-    to{
-        transform: translateY(20%);
+.navButton:focus, .navButton:focus-visible{
+    outline: none;
+    border: none;
+}
+
+.navButton:hover{
+    border: none;
+    outline: none;
+}
+
+.barreHaut{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.barreHaut.active{
+    transform: rotate(45deg) translate(3px, 4px);
+   
+}
+
+.barreBas.active{
+    transform: rotate(-45deg);
+    bottom: inherit;
+}
+
+.barreBas{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.navMenu{
+    position: fixed;
+    top: 100%;
+    width: 100%;
+    height: 0%;
+    transition: all 0.5s ease-in-out;
+}
+
+.navMenu.active{
+    height: 80%;
+}
+
+.navMenuList{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    height: 100%;
+}
+
+.navMenuElement{
+    display: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+.navMenu.active .navMenuElement{
+    display: inline;
+    padding: 10px 30px;
+    animation: fadeIn 1s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+    from{
         opacity: 0;
     }
-}
-
-@keyframes fillLoadingBarre{
-    0%{
-        top: 0;
-        height: 100%;
-    }
-    100% {
-        height: 0px;
+    to{
+        opacity: 1;
     }
 }
 
-@media only screen and (max-width: 450px) {
-    .homeTitle h1{
-        font-size: 2em;
+@media only screen and (max-width : 1000px) {
+    .navMenuElement{
+        width: 20%;
     }
-    .arrowContainer{
-        font-size: 18px
+}
+
+@media only screen and (max-width : 750px) {
+    .navMenu{
+        top: 115%;
+    }
+}
+
+@media only screen and (max-width : 650px) {
+    .nav h1{
+        font-size: 36px;
+    }
+    .navMenu{
+        top: 200%;
+    }
+    .navMenuList{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width : 450px) {
+    .nav{
+        justify-content: inherit;
+    }
+
+    .nav h1{
+        margin-left: 5%;
+    }
+
+    
+
+    
+}
+
+@media only screen and (max-width : 350px) {  
+    .nav h1{
+       font-size: 30px;
     }
 }

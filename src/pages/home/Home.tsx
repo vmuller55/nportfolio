@@ -1,79 +1,61 @@
 import './home.css'
-import { useState, useEffect } from 'react'
-import Typewriter from "typewriter-effect";
-import Resume from '../../components/resume/Resume';
-import Animation from '../../components/animation/Animation';
+import { useEffect, useState } from 'react'
 
 const Home = () => {
 
-    const [loader, setLoader] = useState(true)
-    const [isLoading, setIsLoading] = useState(true)
+    const [scrollDirection, setScrollDirection] = useState("up")
+    const [navMenuIsOpen, setNavMenuIsOpen] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoader(false)
-        }, 4000)
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 6000)
-    }, [])
+
+        let lastScrollY = window.pageYOffset;
+        const updateScrollDirection = () => {
+            const scrollY = window.pageYOffset;
+            const direction = scrollY > lastScrollY ? "down" : "up";
+            if (direction !== scrollDirection && (Math.abs(scrollY - lastScrollY) >= 5)) {
+                setScrollDirection(direction)
+            }
+            lastScrollY = scrollY > 0 ? scrollY : 0;
+        }
+        window.addEventListener("scroll", updateScrollDirection);
+        return () => {
+            window.removeEventListener("scroll", updateScrollDirection)
+        }
+        
+    }, [scrollDirection])
+
+    const handleOpenNavMenu = () => {
+        setNavMenuIsOpen(!navMenuIsOpen)
+    }
+
+
+    const handleScrollTo = (scrollToElement: string) => {
+        const element = document.getElementById(scrollToElement)
+        element?.scrollIntoView({behavior : 'smooth', block : 'start'})
+    }
 
     return(
-        <div className="loadingScreen">
-            <div className={`homeContainer ${isLoading ? 'loading' : ''}`}>
-                <div className="homeLoader">
-                    <div className={`homeImageTop`}>
-                    </div>
-                    <div className="homeTitle">
-                        <h1>
-                            <Typewriter
-                                onInit={(typewriter) => {
-                                    typewriter
-                                    .pauseFor(4000)
-                                    .typeString("DevincentWeb")
-                                    .pauseFor(1000)
-                                    .deleteAll()
-                                    .typeString("Développeur Web")
-                                    .pauseFor(2000)
-                                    .deleteAll()
-                                    .typeString("DevincentWeb")
-                                    .start()
-                                }}
-                            />
-                        </h1>
-                        <div className="arrow">
-                            <div className="arrowContainer">
-                                <i className="fa-solid fa-angles-down"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`loader ${loader ? 'animate' : 'off'}`}>
-                        <div className="textLoader">
-                            <Typewriter
-                                onInit={(typewriter) => {
-                                    typewriter
-                                    .typeString("Chargement...")
-                                    .pauseFor(1000)
-                                    .start()
-                                }}
-                            />
-                        </div>
-                        <div className="barre">
-                            <div className="recharge"></div>
-                        </div>
-                        <div className="loaderBack"></div>
-                    </div>
+       <div className={`homeContainer ${navMenuIsOpen ? 'disableScroll' : ''}`} id='homeContainer'>
+        <nav className={`nav ${scrollDirection === "up" ?  'IsVisible' : navMenuIsOpen ? 'IsVisible' : 'IsNotVisible'}`}>
+            <h1>DeVincentWeb</h1>
+            <button className={`navButton ${scrollDirection == "up" ? '' : 'off'}`} onClick={() => handleOpenNavMenu()}>
+                <div className={`barreHaut ${navMenuIsOpen ? 'active' : ''}`}></div>
+                <div className={`barreBas ${navMenuIsOpen ? 'active' : ''}`}></div> 
+            </button> 
+                <div className={`navMenu ${navMenuIsOpen ? 'active' : ''}`}>
+                    <ul className='navMenuList'>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("acceuil")}>Acceuil</li>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("presentation")}>Présentation</li>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("contact")}>Contact</li>
+                    </ul>
                 </div>
-                <div className="homeContent">
-                </div>
-                <section className="resume">
-                    <Resume/>
-                </section>
-                <section>
-                    <Animation/>
-                </section>
-            </div>
+        </nav>
+        <div className="homeContent">
+            <section id='acceuil' style={{height : "100vh"}}></section>
+            <section id='presentation' style={{height : "100vh", backgroundColor : 'blue'}}></section>
+            <section id='contact' style={{height : "100vh"}}></section>
         </div>
+       </div>
     )
 }
 
