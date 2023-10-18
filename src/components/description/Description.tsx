@@ -25,6 +25,7 @@ const Description = () => {
                     <h2>Développement sans CMS</h2>
                     <p>Un outil fait sur-mesure pour vous.</p>
                     <p>Une réponse personnalisée à vos besoins.</p>
+                    <p>Maîtrisez votre image sur le web!</p>
                 </div>
                 <img src={Smoke} alt='Fumée rose et bleu' className='smoke'></img>
             </div>

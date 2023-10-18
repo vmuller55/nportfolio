@@ -26,8 +26,10 @@
 }
 
 .secondText{
-    align-self: self-end;
+    align-self: flex-end;
     text-align: end;
+    margin-bottom: 10%;
+    margin-right: 5%;
 }
 
 .smoke{
@@ -41,7 +43,15 @@
     -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0D1321);
 }
 
-
+:-moz-any(.smoke) {
+    left: inherit;
+    right: inherit;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    top: 0;
+    width: 100%;
+}
 
 @media only screen and (max-width : 750px) {
     .descriptionText{
@@ -61,6 +71,15 @@
     .smoke{
         width: 100vw;
         top: 40%;
+    }
+    :-moz-any(.smoke) {
+        left: inherit;
+        right: inherit;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%) rotate(180deg);
+        top: 0;
+        width: 100%;
     }
 }
 

@@ -3,6 +3,7 @@ import './home.css'
 import { useEffect, useState } from 'react'
 
 import Description from '../../components/description/Description'
+import Presentation from '../../components/presentation/Presentation'
 
 const Home = () => {
 
@@ -62,7 +63,9 @@ const Home = () => {
             <section id='acceuil'>
                 <Description/>
             </section>
-            <section id='presentation' style={{height : "100vh", backgroundColor : '#0D1321', width : '100%'}}></section>
+            <section id='presentation'>
+                <Presentation/>
+            </section>
             <section id='contact' style={{height : "1000px", width : '100%'}}></section>
         </div>
        </div>
