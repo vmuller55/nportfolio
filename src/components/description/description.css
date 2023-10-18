@@ -1,0 +1,55 @@
+.descriptionContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0D1321;
+    overflow-y: hidden;
+}
+
+.descriptionContent{
+    margin: 15% 5% 0% 5%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.descriptionText{
+    color: #F0EBD8;
+}
+
+.descriptionText h2{
+    font-size: 40px;
+}
+
+.descriptionAnimation{
+    background-color: aqua;
+}
+
+@media only screen and (max-width : 1000px) {
+    .descriptionContent{
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width : 750px) {
+    .descriptionContent{
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .descriptionContent{
+        margin-top: 30%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 80%;
+    }
+    .descriptionAnimation{
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .descriptionAnimation{
+        width: 80%;
+        margin: auto;
+    }
+}

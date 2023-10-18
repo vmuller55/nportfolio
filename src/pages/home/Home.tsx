@@ -1,6 +1,8 @@
 import './home.css'
 import { useEffect, useState } from 'react'
 
+import Description from '../../components/description/Description'
+
 const Home = () => {
 
     const [scrollDirection, setScrollDirection] = useState("up")
@@ -36,24 +38,27 @@ const Home = () => {
 
     return(
        <div className={`homeContainer ${navMenuIsOpen ? 'disableScroll' : ''}`} id='homeContainer'>
-        <nav className={`nav ${scrollDirection === "up" ?  'IsVisible' : navMenuIsOpen ? 'IsVisible' : 'IsNotVisible'}`}>
+        <nav className={`nav ${scrollDirection === "up" ?  '' : navMenuIsOpen ? '' : 'IsNotVisible'}`}>
             <h1>DeVincentWeb</h1>
             <button className={`navButton ${scrollDirection == "up" ? '' : 'off'}`} onClick={() => handleOpenNavMenu()}>
                 <div className={`barreHaut ${navMenuIsOpen ? 'active' : ''}`}></div>
                 <div className={`barreBas ${navMenuIsOpen ? 'active' : ''}`}></div> 
             </button> 
-                <div className={`navMenu ${navMenuIsOpen ? 'active' : ''}`}>
+                
+        </nav>
+        <div className={`navMenu ${navMenuIsOpen ? 'active' : ''}`}>
                     <ul className='navMenuList'>
                         <li className="navMenuElement" onClick={() => handleScrollTo("acceuil")}>Acceuil</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("presentation")}>Présentation</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("contact")}>Contact</li>
                     </ul>
                 </div>
-        </nav>
         <div className="homeContent">
-            <section id='acceuil' style={{height : "100vh"}}></section>
-            <section id='presentation' style={{height : "100vh", backgroundColor : 'blue'}}></section>
-            <section id='contact' style={{height : "100vh"}}></section>
+            <section id='acceuil'>
+                <Description/>
+            </section>
+            <section id='presentation' style={{height : "1000px", backgroundColor : 'blue', width : '100%'}}></section>
+            <section id='contact' style={{height : "1000px", width : '100%'}}></section>
         </div>
        </div>
     )
