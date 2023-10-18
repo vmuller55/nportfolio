@@ -1,6 +1,16 @@
 import './description.css'
+import { useEffect, useState } from 'react'
+import Smoke from '../../assets/pngwing.com (1).png'
 
 const Description = () => {
+    const [animate, setIsAnimate] = useState(false)
+
+    useEffect(() => {
+        setInterval(() => {
+            setIsAnimate(!animate)
+        }, 4000)
+    }, [animate])
+
     return(
         <div className="descriptionContainer">
             <div className="descriptionContent">
@@ -11,7 +21,12 @@ const Description = () => {
                     <p>Obtez pour une plateforme à la hauteur de votre entreprise!</p>
                     <p>Élaborons ensemble votre projet.</p>
                 </div>
-                <div className="descriptionAnimation"></div>
+                <div className="secondText">
+                    <h2>Développement sans CMS</h2>
+                    <p>Un outil fait sur-mesure pour vous.</p>
+                    <p>Une réponse personnalisée à vos besoins.</p>
+                </div>
+                <img src={Smoke} alt='Fumée rose et bleu' className='smoke'></img>
             </div>
         </div>
     )

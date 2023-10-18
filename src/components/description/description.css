@@ -2,42 +2,55 @@
     height: 100vh;
     width: 100vw;
     background-color: #0D1321;
-    overflow-y: hidden;
 }
 
 .descriptionContent{
-    margin: 15% 5% 0% 5%;
+    margin: 0% 5%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    height: 100%;
 }
 
 .descriptionText{
-    color: #F0EBD8;
+    margin-top: 25%;
 }
 
-.descriptionText h2{
+.descriptionText, .secondText{
+    color: #F0EBD8;
+    z-index: 1;
+    text-shadow: 0px 3px 5px black;
+}
+
+.descriptionText h2, .secondText h2{
     font-size: 40px;
 }
 
-.descriptionAnimation{
-    background-color: aqua;
+.secondText{
+    align-self: self-end;
+    text-align: end;
 }
 
-@media only screen and (max-width : 1000px) {
-    .descriptionContent{
-        margin-top: 20%;
-    }
+.smoke{
+    object-fit: contain;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    top: 25%;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0D1321);
 }
+
+
 
 @media only screen and (max-width : 750px) {
-    .descriptionContent{
-        margin-top: 25%;
+    .descriptionText{
+        margin-top: 35%;
     }
 }
 
 @media only screen and (max-width : 600px) {
     .descriptionContent{
-        margin-top: 30%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         height: 80%;
@@ -45,11 +58,24 @@
     .descriptionAnimation{
         height: 80%;
     }
+    .smoke{
+        width: 100vw;
+        top: 40%;
+    }
 }
 
 @media only screen and (max-width : 400px) {
     .descriptionAnimation{
         width: 80%;
         margin: auto;
+    }
+    .descriptionText h2, .secondText h2{
+        font-size: 30px;
+    }
+}
+
+@keyframes rotateSteel {
+    to{
+        transform: rotate(360deg);
     }
 }

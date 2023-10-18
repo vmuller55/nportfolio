@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './home.css'
 import { useEffect, useState } from 'react'
 
@@ -9,7 +10,7 @@ const Home = () => {
     const [navMenuIsOpen, setNavMenuIsOpen] = useState(false)
 
     useEffect(() => {
-
+        const closeMenuOnClickOnPage = document.querySelector(".homeContainer")
         let lastScrollY = window.pageYOffset;
         const updateScrollDirection = () => {
             const scrollY = window.pageYOffset;
@@ -19,12 +20,16 @@ const Home = () => {
             }
             lastScrollY = scrollY > 0 ? scrollY : 0;
         }
+        if(navMenuIsOpen) {
+            closeMenuOnClickOnPage?.addEventListener("click", handleOpenNavMenu)
+        }
+        
         window.addEventListener("scroll", updateScrollDirection);
         return () => {
             window.removeEventListener("scroll", updateScrollDirection)
         }
         
-    }, [scrollDirection])
+    }, [navMenuIsOpen, scrollDirection])
 
     const handleOpenNavMenu = () => {
         setNavMenuIsOpen(!navMenuIsOpen)
@@ -57,7 +62,7 @@ const Home = () => {
             <section id='acceuil'>
                 <Description/>
             </section>
-            <section id='presentation' style={{height : "1000px", backgroundColor : 'blue', width : '100%'}}></section>
+            <section id='presentation' style={{height : "100vh", backgroundColor : '#0D1321', width : '100%'}}></section>
             <section id='contact' style={{height : "1000px", width : '100%'}}></section>
         </div>
        </div>
