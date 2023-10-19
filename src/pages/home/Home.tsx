@@ -37,7 +37,7 @@ const Home = () => {
     }
 
 
-    const handleScrollTo = (scrollToElement) => {
+    const handleScrollTo = (scrollToElement:string) => {
         const element = document.getElementById(scrollToElement)
         element?.scrollIntoView({behavior : 'smooth', block : 'start'})
     }
