@@ -6,16 +6,19 @@ const Presentation = () => {
 
     const [isIntersecting, setIsIntersecting] = useState(false)
     const [isInViewPort, setIsInViewPort] = useState(false)
-    const ref = useRef(null)
+    const ref = useRef()
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsIntersecting(entry.isIntersecting)
-            }
-        )
-        observer.observe(ref.current)
-        return () => observer.disconnect
+    useEffect(() => { 
+        const asyncUseEffect = async () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    setIsIntersecting(entry.isIntersecting)
+                }
+            )
+            observer.observe(ref.current)
+            return () => observer.disconnect
+        }
+        asyncUseEffect()
     }, [isIntersecting])
 
     useEffect(() => {
