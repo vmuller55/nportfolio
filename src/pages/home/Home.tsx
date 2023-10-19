@@ -11,7 +11,7 @@ const Home = () => {
     const [navMenuIsOpen, setNavMenuIsOpen] = useState(false)
 
     useEffect(() => {
-        const closeMenuOnClickOnPage = document.querySelector(".homeContainer")
+        const closeMenuOnClickOnPage = document.querySelector(".homeContent")
         let lastScrollY = window.pageYOffset;
         const updateScrollDirection = () => {
             const scrollY = window.pageYOffset;
@@ -46,7 +46,7 @@ const Home = () => {
        <div className={`homeContainer ${navMenuIsOpen ? 'disableScroll' : ''}`} id='homeContainer'>
         <nav className={`nav ${scrollDirection === "up" ?  '' : navMenuIsOpen ? '' : 'IsNotVisible'}`}>
             <h1>DeVincentWeb</h1>
-            <button className={`navButton ${scrollDirection == "up" ? '' : 'off'}`} onClick={() => handleOpenNavMenu()}>
+            <button className={`navButton`} onClick={() => handleOpenNavMenu()}>
                 <div className={`barreHaut ${navMenuIsOpen ? 'active' : ''}`}></div>
                 <div className={`barreBas ${navMenuIsOpen ? 'active' : ''}`}></div> 
             </button> 

@@ -36,7 +36,7 @@ const Presentation = () => {
             <div className="presentationContent">
                 <h2>Mes services</h2>
                 <div className="services" ref={ref}>
-                    <article className={`service ${isInViewPort ? "animate left" : "leaving"}`}>
+                    <article className={`service ${isInViewPort ? "animate left long" : "leaving"}`}>
                         <h3>Une solution sur-mesure</h3>
                         <p>Développement de votre projet sans CMS, permettant une personalisation absolue!</p>
                     </article>
@@ -56,7 +56,7 @@ const Presentation = () => {
                         <h3>Responsive</h3>
                         <p>Une application qui s'adapte à tout support.</p>
                     </article>
-                    <article className={`service ${isInViewPort ? "animate right" : "leaving"}`}>
+                    <article className={`service ${isInViewPort ? "animate right long" : "leaving"}`}>
                         <h3>Devis gratuit</h3>
                         <p>Prenez contact avec moi pour un devis gratuit de votre projet.</p>
                     </article>

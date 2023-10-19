@@ -6,7 +6,7 @@
 
 .nav{
     min-height: 90px;
-    height: 15%;
+    height: 15vh;
     width: 100%;
     display: flex;
     justify-content: center;
