@@ -2,7 +2,9 @@
     height: 100vh;
     width: 100vw;
     background-color: #0D1321;
-    min-height: 550px;
+    min-height: 700px;
+    overflow: hidden;
+    position: relative;
 }
 
 .presentationContent{
@@ -10,18 +12,35 @@
     margin: 0% 5%;
 }
 
-.presentationContent h2{
+.presentationTitle h2{
     padding-top: 50px;
     margin: 0px;
     color: #F0EBD8;
     text-shadow: 0px 3px 5px black;
     font-size: 40px; 
-    backdrop-filter: blur(5px);
     width: fit-content;
-      
+}
+
+.serviceImg{
+    width: 100%;
+    top: 20%;
+    position: absolute;
+    object-fit: cover;
+    transform: translateX(-10%);
+}
+
+.appearImg{
+    width: 100%;
+    height: 100%;
+    background-color: #0D1321;
+    position: absolute;
+    z-index: 2;
+    transform: translate(100%);
+    animation: imgFromLeft 1.5s ease-in-out;
 }
 
 .services{
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -145,6 +164,15 @@
     }
     to{
         transform: translateY(0%);
+    }
+}
+
+@keyframes imgFromLeft {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
     }
 }
 

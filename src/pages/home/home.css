@@ -116,7 +116,7 @@
     width: 25%;
     animation: fadeIn 1s ease-in-out;
     color: #F0EBD8;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(29, 45, 68, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -164,9 +164,7 @@ section{
 
     .navMenuElement{
         width: 25%;
-    }
-
-    
+    }    
 }
 
 @media only screen and (max-width : 350px) {  
@@ -174,6 +172,25 @@ section{
        font-size: 30px;
     }
 }
+
+@media only screen and (max-height : 480px) {
+    .navMenu{
+        top: 25%;
+    }
+}
+
+@media only screen and (max-height : 380px) {
+    .navMenu{
+        top: 35%;
+    }
+}
+
+@media only screen and (max-height : 280px) {
+    .navMenu{
+        top: 40%;
+    }
+}
+
 
 @keyframes fadeIn {
     from{
