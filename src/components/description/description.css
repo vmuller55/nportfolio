@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100vw;
     background-color: #0D1321;
+    min-height: 550px;
 }
 
 .descriptionContent{
@@ -40,8 +41,8 @@
     right: 50%;
     transform: translate(-50%);
     top: 25%;
-    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0D1321);
 }
+
 
 :-moz-any(.smoke) {
     left: inherit;

@@ -47,8 +47,14 @@ const Presentation = () => {
                         <h3>Référencement</h3>
                         <p>Référencement naturel, SEO. Investissez de façon durable.</p>
                     </article>
-                    <article className={`service ${isInViewPort ? "animate down" : "leaving"}`}></article>
-                    <article className={`service ${isInViewPort ? "animate right" : "leaving"}`}></article>
+                    <article className={`service ${isInViewPort ? "animate down" : "leaving"}`}>
+                        <h3>Responsive</h3>
+                        <p>Une application qui s'adapte à tout support.</p>
+                    </article>
+                    <article className={`service ${isInViewPort ? "animate right" : "leaving"}`}>
+                        <h3>Devis gratuit</h3>
+                        <p>Prenez contact avec moi pour un devis gratuit de votre projet.</p>
+                    </article>
                 </div>
             </div>
         </div>
