@@ -1,6 +1,6 @@
 import './presentation.css'
 import { useState, useRef, useEffect } from 'react'
-import Service from '../../assets/newn.png'
+
 
 const Presentation = () => {
 
@@ -33,8 +33,6 @@ const Presentation = () => {
 
     return (
         <div className="presentationContainer">
-            <div className={`${isInViewPort ? "appearImg" : ""}`}></div>
-            <img src={Service} alt="" className='serviceImg'/>
             <div className="presentationContent">
                 <div className="presentationTitle">
                     <h2>Mes services</h2>
