@@ -1,7 +1,6 @@
 .descriptionContainer{
     height: 100vh;
     width: 100vw;
-    background-color: #0D1321;
     min-height: 700px;
     padding-bottom: 50px;
 }
@@ -19,8 +18,12 @@
 
 .descriptionText, .secondText{
     color: #F0EBD8;
-    z-index: 1;
+    z-index: 3;
     text-shadow: 0px 3px 5px black;
+}
+
+.descriptionText.animate, .secondText.animate{
+    animation: blur 1.5s ease-in-out;
 }
 
 .descriptionText h2, .secondText h2{
@@ -42,6 +45,7 @@
     right: 50%;
     transform: translate(-50%) rotate(180deg);
     top: 0%;
+    z-index: 2;
 }
 
 @media only screen and (max-width : 750px) {
@@ -74,6 +78,12 @@
     }
     .descriptionText h2, .secondText h2{
         font-size: 30px;
+    }
+}
+
+@keyframes blur {
+    from{
+        filter: blur(5px);
     }
 }
 
