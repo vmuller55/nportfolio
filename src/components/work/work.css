@@ -164,7 +164,7 @@
         object-position: center;
     }
     .card:hover .cardBanner h3{
-        font-size: 18px;
+        display: none;
     }
     .card:hover .cardBanner p{
         font-size: 14px;
