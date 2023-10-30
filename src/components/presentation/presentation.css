@@ -3,7 +3,6 @@
     width: 100vw;
     min-height: 700px;
     position: relative;
-    overflow-x: hidden;
 }
 
 .presentationContent{
