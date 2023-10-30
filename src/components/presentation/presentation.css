@@ -8,7 +8,6 @@
 
 .presentationContent{
     height: 100%;
-    margin: 0% 5%;
 }
 
 .presentationTitle h2{
@@ -18,14 +17,15 @@
     text-shadow: 0px 3px 5px black;
     font-size: 40px; 
     width: fit-content;
+    margin-left: 5%;
 }
 
 .services{
-    margin-top: 5%;
+    margin: 5% auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 100%;
+    width: 80%;
     height: 50%;
     gap: 30px;
     justify-content: center;
@@ -39,7 +39,7 @@
     text-align: center;
     z-index: 2;
     color: #F0EBD8;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(33, 53, 71, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -70,6 +70,33 @@
     animation: fromDown 1.5s ease-in-out;
 }
 
+.nuages{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    top: 25%;
+    left: 25%;
+}
+
+.nuage{
+    position: absolute;
+    animation: cloudMouvement 2s ease-in-out infinite alternate;
+    width: 50%;
+    color: linear-gradient(black, red);
+}
+
+
+
+@keyframes cloudMouvement{
+    0%{
+        transform: translate(4px, 4px);
+    }
+    100%{
+        transform: translate(-4px, -4px)
+    }
+}
+
 @media only screen and (max-width:1060px) {
     .service{
         min-height: 120px;
@@ -84,6 +111,18 @@
     }
 }
 
+@media only screen and (max-width:890px) {
+    .service{
+        min-height: 170px;
+    }
+    .nuage{
+        width: 60%;
+    }
+    .nuages{
+        left: 20%;
+    }
+}
+
 @media only screen and (max-width:790px) {
     .presentationContainer{
         min-height: 750px;
@@ -92,6 +131,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
         margin:  30px auto ;
+    }
+
+    .service{
+        min-height: 130px;
     }
 
     .service.animate.left.long{
@@ -114,6 +157,12 @@
     .service.animate.down{
         animation: fromRight 1.5s ease-in-out;
     }
+    .nuage{
+        width: 70%;
+    }
+    .nuages{
+        left: 15%;
+    }
 }
 
 @media only screen and (max-width:550px) {
@@ -127,6 +176,12 @@
     .services{
         height: fit-content;
         gap: 15px;
+    }
+    .nuage{
+        width: 90%;
+    }
+    .nuages{
+        left: 5%;
     }
 }
 

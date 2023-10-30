@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import Description from '../../components/description/Description'
 import Presentation from '../../components/presentation/Presentation'
+import Work from '../../components/work/Work'
 
 const Home = () => {
 
@@ -43,7 +44,7 @@ const Home = () => {
     }
 
     return(
-       <div className={`homeContainer ${navMenuIsOpen ? 'disableScroll' : ''}`} id='homeContainer'>
+       <div className={`homeContainer`} id='homeContainer'>
         <nav className={`nav ${scrollDirection === "up" ?  '' : navMenuIsOpen ? '' : 'IsNotVisible'}`}>
             <h1>DeVincentWeb</h1>
             <button className={`navButton`} onClick={() => handleOpenNavMenu()}>
@@ -55,16 +56,20 @@ const Home = () => {
         <div className={`navMenu ${navMenuIsOpen ? 'active' : ''}`}>
                     <ul className='navMenuList'>
                         <li className="navMenuElement" onClick={() => handleScrollTo("acceuil")}>Acceuil</li>
-                        <li className="navMenuElement" onClick={() => handleScrollTo("presentation")}>Présentation</li>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("presentation")}>Mes services</li>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("work")}>Mon travail</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("contact")}>Contact</li>
                     </ul>
                 </div>
-        <div className="homeContent">
+        <div className={`homeContent ${navMenuIsOpen ? 'blur' : ""}`}>
             <section id='acceuil'>
                 <Description/>
             </section>
             <section id='presentation'>
                 <Presentation/>
+            </section>
+            <section id='work'>
+                <Work/>
             </section>
             <section id='contact' style={{height : "1000px", width : '100%'}}></section>
         </div>

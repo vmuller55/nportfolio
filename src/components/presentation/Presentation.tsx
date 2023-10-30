@@ -1,6 +1,6 @@
 import './presentation.css'
 import { useState, useRef, useEffect } from 'react'
-
+import Cloud from '../../assets/cloud.png'
 
 const Presentation = () => {
 
@@ -26,9 +26,7 @@ const Presentation = () => {
     useEffect(() => {
         if (isIntersecting) {
           setIsInViewPort(true)
-        } else {
-          setIsInViewPort(false)
-        }
+        } 
       }, [isIntersecting]);
 
     return (
@@ -62,6 +60,9 @@ const Presentation = () => {
                         <h3>Devis gratuit</h3>
                         <p>Prenez contact avec moi pour un devis gratuit de votre projet.</p>
                     </article>
+                </div>
+                <div className="nuages">
+                    <img src={Cloud} alt='nuage' className='nuage'></img>
                 </div>
             </div>
         </div>
