@@ -3,7 +3,7 @@
     width: 100vw;
     min-height: 700px;
     padding-bottom: 50px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .descriptionContent{
