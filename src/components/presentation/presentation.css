@@ -176,7 +176,7 @@
     .services{
         height: fit-content;
         gap: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     .nuage{
         width: 90%;
@@ -188,7 +188,7 @@
 
 @media only screen and (max-width: 330px) {
     .services{
-        margin: 20px auto;
+        margin: 25px auto;
     }
 
     .service h3{
