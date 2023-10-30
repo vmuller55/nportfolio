@@ -77,4 +77,7 @@
     .descriptionText h2, .secondText h2{
         font-size: 30px;
     }
+    .secondText h2{
+        margin-left: 5%;
+    }
 }
