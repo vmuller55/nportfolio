@@ -63,6 +63,7 @@ const Presentation = () => {
                 </div>
                 <div className="nuages">
                     <img src={Cloud} alt='nuage' className='nuage'></img>
+                    <img src={Cloud} alt='nuage' className='nuage two'></img>
                 </div>
             </div>
         </div>
