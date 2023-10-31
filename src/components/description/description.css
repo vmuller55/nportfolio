@@ -35,20 +35,22 @@
     margin-right: 5%;
 }
 
-.smoke{
+.galaxy{
     object-fit: cover;
-    width: 60%;
+    width: 50%;
     position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%) rotate(180deg);
-    top: 0%;
+    right: 30px;
+    top: 0;
     z-index: 2;
 }
 
 @media only screen and (max-width : 750px) {
     .descriptionText{
         margin-top: 35%;
+    }
+    .galaxy{
+        width: 70%;
+        top: 20%;
     }
 }
 
@@ -61,7 +63,7 @@
     .descriptionAnimation{
         height: 80%;
     }
-    .smoke{
+    .galaxy{
         width: 100vw;
         top: 25%;
         left: 0%;

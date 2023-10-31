@@ -140,6 +140,21 @@ section{
     width: 100%;
 }
 
+.footer{
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.forestFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: top;
+}
 
 @media only screen and (max-width : 1000px) {
     .navMenuElement{

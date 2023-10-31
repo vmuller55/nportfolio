@@ -2,9 +2,12 @@
 import './home.css'
 import { useEffect, useState } from 'react'
 
+import Forest from '../../assets/forestThree.png'
+
 import Description from '../../components/description/Description'
 import Presentation from '../../components/presentation/Presentation'
 import Work from '../../components/work/Work'
+import Contact from '../../components/contact/Contact'
 
 const Home = () => {
 
@@ -71,7 +74,12 @@ const Home = () => {
             <section id='work'>
                 <Work/>
             </section>
-            <section id='contact' style={{height : "1000px", width : '100%'}}></section>
+            <section id='contact'>
+                <Contact/>
+            </section>
+        </div>
+        <div className="footer">
+            <img src={Forest} alt="forêt" className='forestFooter'/>
         </div>
        </div>
     )

@@ -1,6 +1,6 @@
 import './description.css'
 import { useEffect, useState, useRef } from 'react'
-import Smoke from '../../assets/pngwing.com (1).png'
+import Galaxy from '../../assets/planete.png'
 
 const Description = () => {
     const [animate, setIsAnimate] = useState(false)
@@ -54,7 +54,7 @@ const Description = () => {
                     <p>Une réponse personnalisée à vos besoins.</p>
                     <p>Maîtrisez votre image sur le web!</p>
                 </div>
-                <img src={Smoke} alt='Fumée rose et bleu' className='smoke'></img>
+                <img src={Galaxy} alt='Fumée rose et bleu' className='galaxy'></img>
             </div>
         </div>
     )

@@ -1,6 +1,8 @@
 .workContainer{
     height: 100vh;
     width: 100vw;
+    min-height: 700px;
+    position: relative;
 }
 
 .workContent{
@@ -72,6 +74,7 @@
     margin: auto;
     width: 90%;
     height: 80%;
+    min-height: 100px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -142,6 +145,35 @@
     cursor: pointer;
 }
 
+.cloudContainer{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.cloudContainer img{
+    width: 50%;
+}
+
+.firstCloud{
+    position: absolute;
+    top: 20% ;
+    left: -20%;
+}
+
+.secondCloud{
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+}
+
+.thirdCloud{
+    position: absolute;
+    top: 0;
+    right: -20%;
+}
+
 @media only screen and (max-width : 850px) {
     .workCards{
         grid-template-columns: 1fr;
@@ -153,6 +185,10 @@
             "d";
     }
     
+    .coiff img{
+        object-position: 0px -250px;
+    }
+
     .cardBanner{
         height: 40%;
     }
@@ -171,5 +207,18 @@
     }
     .card:hover .deerAlyx h3{
         margin-top: 0px;
+    }
+}
+
+@media only screen and (max-height:550px) {
+    .workCards{
+        row-gap: 30px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .card:hover .cardBanner i{
+        right: 10px;
+        top: 10px;
     }
 }

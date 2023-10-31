@@ -69,34 +69,19 @@
     animation: fromDown 1.5s ease-in-out;
 }
 
-.nuages{
-    width: 100%;
-    height: 100%;
+.planetContainer{
+    width: 50%;
     position: absolute;
-    opacity: 0.5;
-    top: 25%;
-    left: 25%;
+    top: 20%;
+    transform: rotate(35deg);
 }
 
-.nuage{
+.planet{
     position: absolute;
-    animation: cloudMouvement 2s ease-in-out infinite alternate;
-    width: 50%;
+    width: 100%;
     color: linear-gradient(black, red);
 }
 
-.nuage.two{
-    display: none;
-}
-
-@keyframes cloudMouvement{
-    0%{
-        transform: translate(4px, 4px);
-    }
-    100%{
-        transform: translate(-4px, -4px)
-    }
-}
 
 @media only screen and (max-width:1060px) {
     .service{
@@ -116,11 +101,8 @@
     .service{
         min-height: 170px;
     }
-    .nuage{
-        width: 60%;
-    }
-    .nuages{
-        left: 20%;
+    .planetContainer{
+        width: 70%;
     }
 }
 
@@ -158,11 +140,8 @@
     .service.animate.down{
         animation: fromRight 1.5s ease-in-out;
     }
-    .nuage{
-        width: 70%;
-    }
-    .nuages{
-        left: 15%;
+    .planetContainer{
+        top: 50%;
     }
 }
 
@@ -179,16 +158,11 @@
         gap: 15px;
         margin-bottom: 20px;
     }
-    .nuage{
-        width: 90%;
-    }
-    .nuages{
-        left: 5%;
-    }
-    .nuage.two{
-        display: bloc;
-        top: 20%;
-        transform: rotateX(180deg);
+    .planetContainer{
+        width: 100%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%);
     }
 }
 
@@ -205,6 +179,7 @@
         margin-bottom: 0px;
         font-size: 13px;
     }
+    
 }
 
 @keyframes fromLeft{

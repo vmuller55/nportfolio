@@ -1,6 +1,6 @@
 import './presentation.css'
 import { useState, useRef, useEffect } from 'react'
-import Cloud from '../../assets/cloud.png'
+import Planet from '../../assets/planet.png'
 
 const Presentation = () => {
 
@@ -61,9 +61,8 @@ const Presentation = () => {
                         <p>Prenez contact avec moi pour un devis gratuit de votre projet.</p>
                     </article>
                 </div>
-                <div className="nuages">
-                    <img src={Cloud} alt='nuage' className='nuage'></img>
-                    <img src={Cloud} alt='nuage' className='nuage two'></img>
+                <div className="planetContainer">
+                    <img src={Planet} alt='nuage' className='planet'></img>
                 </div>
             </div>
         </div>
