@@ -43,14 +43,14 @@ const Description = () => {
             <div className="descriptionContent" ref={ref}>
                 <div className={`descriptionText ${isInViewPort? "animate" : ""}`}>
                     <h2>Création d'applications web</h2>
-                    <p>Vous cherchez à créer votre emprunte sur internet?</p>
-                    <p>Trouvez une solution web adaptée à vos besoins.</p>
-                    <p>Obtez pour une plateforme à la hauteur de votre entreprise!</p>
+                    <p>Vous cherchez à créer votre empreinte sur Internet?</p>
+                    <p>Trouvez une solution web adapté à vos besoins.</p>
+                    <p>Optez pour une plateforme à la hauteur de votre entreprise!</p>
                     <p>Élaborons ensemble votre projet.</p>
                 </div>
                 <div className={`secondText ${isInViewPort? "animate" : ""}`}>
                     <h2>Développement sans CMS</h2>
-                    <p>Un outil fait sur-mesure pour vous.</p>
+                    <p>Un outil fait sur mesure pour vous.</p>
                     <p>Une réponse personnalisée à vos besoins.</p>
                     <p>Maîtrisez votre image sur le web!</p>
                 </div>

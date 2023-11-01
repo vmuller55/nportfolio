@@ -57,7 +57,7 @@ const Work = () => {
                     <div className={`card coiff ${animateOne ? 'animate' : ''}`}>
                         <div className="cardBanner">
                             <h3>Coiff Sam</h3>
-                            <p>Projet en cours - Plateforme récapitulant les prestations et les horraires d'un salon de coiffure.</p>
+                            <p>Projet en cours - Plateforme récapitulant les prestations et les horaires d'un salon de coiffure.</p>
                             <a href="https://vmuller55.github.io/sam-coiffure/"><i className="fa-solid fa-globe"></i></a>
                         </div>
                         <img src={WorkImageTwo} alt="Présentation site salon de coiffure" className='cardImg'/>

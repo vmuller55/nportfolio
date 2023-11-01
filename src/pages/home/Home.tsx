@@ -58,7 +58,7 @@ const Home = () => {
         </nav>
         <div className={`navMenu ${navMenuIsOpen ? 'active' : ''}`}>
                     <ul className='navMenuList'>
-                        <li className="navMenuElement" onClick={() => handleScrollTo("acceuil")}>Acceuil</li>
+                        <li className="navMenuElement" onClick={() => handleScrollTo("acceuil")}>Accueil</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("presentation")}>Mes services</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("work")}>Mon travail</li>
                         <li className="navMenuElement" onClick={() => handleScrollTo("contact")}>Contact</li>

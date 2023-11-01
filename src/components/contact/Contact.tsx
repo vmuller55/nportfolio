@@ -8,7 +8,7 @@ const Contact = () => {
                     <h2>Me contacter</h2>
                 </div>
                 <div className="contactInfo">
-                    <h3>Contactez moi pour votre projet par mail :</h3>
+                    <h3>Contactez-moi pour votre projet par mail :</h3>
                     <h3><a href="mailto:devincentweb@gmail.com">DEVINCENTWEB@GMAIL.COM</a></h3>
                     <h3>Voici mon Github pour mes projets en cours :</h3>
                     <a href='https://github.com/vmuller55'><i className="fa-brands fa-github iconGit"></i></a>

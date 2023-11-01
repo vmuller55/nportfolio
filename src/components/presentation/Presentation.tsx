@@ -37,8 +37,8 @@ const Presentation = () => {
                 </div>
                 <div className="services" ref={ref}>
                     <article className={`service ${isInViewPort ? "animate left long" : "leaving"}`}>
-                        <h3>Une solution sur-mesure</h3>
-                        <p>Développement de votre projet sans CMS, permettant une personalisation absolue!</p>
+                        <h3>Une solution sur mesure</h3>
+                        <p>Développement de votre projet sans CMS, permettant une personnalisation absolue!</p>
                     </article>
                     <article className={`service ${isInViewPort ? "animate up" : "leaving"}`}>
                         <h3>Accessibilité</h3>

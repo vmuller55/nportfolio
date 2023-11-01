@@ -5,10 +5,6 @@
     position: relative;
 }
 
-.presentationContent{
-    height: 100%;
-}
-
 .presentationTitle h2{
     padding-top: 50px;
     margin: 0px;
@@ -48,6 +44,14 @@
     opacity: 0;
 }
 
+.service p{
+    margin: auto 5%;
+}
+.service h3{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .service.animate{
     opacity: 1;
     animation: fadeIn 1.5s ease-in-out;
@@ -85,7 +89,7 @@
 
 @media only screen and (max-width:1060px) {
     .service{
-        min-height: 120px;
+        min-height: 200px;
     }
 
     .service h3{
@@ -98,9 +102,7 @@
 }
 
 @media only screen and (max-width:890px) {
-    .service{
-        min-height: 170px;
-    }
+    
     .planetContainer{
         width: 70%;
     }
@@ -115,9 +117,8 @@
         grid-template-rows: repeat(4, 1fr);
         margin:  30px auto ;
     }
-
     .service{
-        min-height: 130px;
+        min-height: 120px;
     }
 
     .service.animate.left.long{
@@ -153,6 +154,9 @@
         margin-top: 5px;
         font-size: 14px;
     }
+    .service{
+        min-height: 150px;
+    }
     .services{
         height: fit-content;
         gap: 15px;
@@ -170,7 +174,6 @@
     .services{
         margin: 25px auto;
     }
-
     .service h3{
         font-size: 18px;
     }
