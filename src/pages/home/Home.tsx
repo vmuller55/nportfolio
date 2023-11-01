@@ -50,7 +50,7 @@ const Home = () => {
        <div className={`homeContainer`} id='homeContainer'>
         <nav className={`nav ${scrollDirection === "up" ?  '' : navMenuIsOpen ? '' : 'IsNotVisible'}`}>
             <h1>DeVincentWeb</h1>
-            <button className={`navButton`} onClick={() => handleOpenNavMenu()}>
+            <button className={`navButton`} aria-label='navigation' onClick={() => handleOpenNavMenu()}>
                 <div className={`barreHaut ${navMenuIsOpen ? 'active' : ''}`}></div>
                 <div className={`barreBas ${navMenuIsOpen ? 'active' : ''}`}></div> 
             </button> 

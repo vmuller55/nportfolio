@@ -50,7 +50,7 @@ const Work = () => {
                         <div className="cardBanner">
                             <h3>DeerAlyx Formation</h3>
                             <p>Projet en cours - Plateforme récapitulant les activités, le travail et les contacts d'une prothésiste ongulaire.</p>
-                            <a href='https://vmuller55.github.io/nndeerAlyx/'><i className="fa-solid fa-globe"></i></a>
+                            <a href='https://vmuller55.github.io/nndeerAlyx/' aria-label='Vers le projet DeerAlyx'><i className="fa-solid fa-globe"></i></a>
                         </div>
                         <img src={WorkImage} alt="Présentation site formation onglerie" className='cardImg'/>
                     </div>
@@ -58,7 +58,7 @@ const Work = () => {
                         <div className="cardBanner">
                             <h3>Coiff Sam</h3>
                             <p>Projet en cours - Plateforme récapitulant les prestations et les horaires d'un salon de coiffure.</p>
-                            <a href="https://vmuller55.github.io/sam-coiffure/"><i className="fa-solid fa-globe"></i></a>
+                            <a href="https://vmuller55.github.io/sam-coiffure/" aria-label='Vers le projet Coiff sam'><i className="fa-solid fa-globe"></i></a>
                         </div>
                         <img src={WorkImageTwo} alt="Présentation site salon de coiffure" className='cardImg'/>
                     </div>
@@ -66,7 +66,7 @@ const Work = () => {
                         <div className="cardBanner">
                             <h3>Template</h3>
                             <p>Maquette type pour une plateforme web.</p>
-                            <a href="https://www.figma.com/file/iRhxIRd177ZF0URz01XlQ4/Cloud-Barbie?type=design&node-id=0%3A1&mode=design&t=qRmf6WdbThOZjg8w-1"><i className="fa-solid fa-globe"></i></a>
+                            <a href="https://www.figma.com/file/iRhxIRd177ZF0URz01XlQ4/Cloud-Barbie?type=design&node-id=0%3A1&mode=design&t=qRmf6WdbThOZjg8w-1" aria-label='Vers une maquette'><i className="fa-solid fa-globe"></i></a>
                         </div>
                         <img src={WorkImageThree} alt="Template site rose et bleu" className='cardImg'/>
                     </div>
@@ -74,7 +74,7 @@ const Work = () => {
                         <div className="cardBanner">
                             <h3>Template</h3>
                             <p>Maquette type pour une plateforme web.</p>
-                            <a href="https://www.figma.com/file/nHAYEFtjzu2MmjIRPIVhYN/astro?type=design&mode=design&t=qRmf6WdbThOZjg8w-1"><i className="fa-solid fa-globe"></i></a>
+                            <a href="https://www.figma.com/file/nHAYEFtjzu2MmjIRPIVhYN/astro?type=design&mode=design&t=qRmf6WdbThOZjg8w-1" aria-label='Vers une maquette'><i className="fa-solid fa-globe"></i></a>
                         </div>
                         <img src={WorkImageFour} alt="Template site thème astro" className='cardImg'/>
                     </div>

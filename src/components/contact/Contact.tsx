@@ -9,9 +9,9 @@ const Contact = () => {
                 </div>
                 <div className="contactInfo">
                     <h3>Contactez-moi pour votre projet par mail :</h3>
-                    <h3><a href="mailto:devincentweb@gmail.com">DEVINCENTWEB@GMAIL.COM</a></h3>
+                    <h3><a href="mailto:devincentweb@gmail.com" aria-label='Vers mon adresse mail'>DEVINCENTWEB@GMAIL.COM</a></h3>
                     <h3>Voici mon Github pour mes projets en cours :</h3>
-                    <a href='https://github.com/vmuller55'><i className="fa-brands fa-github iconGit"></i></a>
+                    <a href='https://github.com/vmuller55' aria-label='Vers mon espace Github'><i className="fa-brands fa-github iconGit"></i></a>
                     <h3>Les technologies que j'utilise :</h3>
                     <div className="techTab">
                         <i className="fa-brands fa-html5"></i>
