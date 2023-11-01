@@ -2,7 +2,7 @@
 import './home.css'
 import { useEffect, useState } from 'react'
 
-import Forest from '../../assets/forestThree.png'
+import Forest from '../../assets/forestThree 1.svg'
 
 import Description from '../../components/description/Description'
 import Presentation from '../../components/presentation/Presentation'

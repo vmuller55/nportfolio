@@ -1,6 +1,6 @@
 import './presentation.css'
 import { useState, useRef, useEffect } from 'react'
-import Planet from '../../assets/planet.png'
+import Planet from '../../assets/planet 1.svg'
 
 const Presentation = () => {
 

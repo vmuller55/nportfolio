@@ -1,10 +1,10 @@
 import './work.css'
-import WorkImage from '../../assets/deerAlyx.png'
-import WorkImageTwo from '../../assets/SamMobile.png'
-import WorkImageThree from '../../assets/Mobile Cloud.png'
-import WorkImageFour from '../../assets/Desktop - 1.png'
+import WorkImage from '../../assets/deerAlyx 1.svg'
+import WorkImageTwo from '../../assets/SamMobile 1.svg'
+import WorkImageThree from '../../assets/Mobile-Cloud 1.svg'
+import WorkImageFour from '../../assets/Desktop-1 1.svg'
 import { useState, useRef, useEffect } from 'react'
-import Cloud from '../../assets/cloud.png'
+import Cloud from '../../assets/cloud 1.svg'
 
 
 const Work = () => {

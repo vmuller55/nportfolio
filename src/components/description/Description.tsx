@@ -1,6 +1,6 @@
 import './description.css'
 import { useEffect, useState, useRef } from 'react'
-import Galaxy from '../../assets/planete.png'
+import Galaxy from '../../assets/planete 1.svg'
 
 const Description = () => {
     const [animate, setIsAnimate] = useState(false)
