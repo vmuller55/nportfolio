@@ -3,6 +3,7 @@
     width: 100vw;
     min-height: 700px;
     position: relative;
+    display: flex;
 }
 
 .presentationTitle h2{
@@ -45,7 +46,8 @@
 }
 
 .service p{
-    margin: auto 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .service h3{
     margin-left: 5%;
@@ -110,7 +112,7 @@
 
 @media only screen and (max-width:790px) {
     .presentationContainer{
-        min-height: 750px;
+        min-height: 800px;
     }
     .services{
         grid-template-columns: repeat(2, 1fr);
@@ -126,6 +128,9 @@
         grid-row-start: 1;
         animation: inherit;
         animation: fromUp 1.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .service.animate.right.long{
@@ -133,6 +138,9 @@
         grid-row-start: 4;
         animation: inherit;
         animation: fromDown 1.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .service.animate.up{
         animation: inherit;
